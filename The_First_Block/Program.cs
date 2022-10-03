@@ -2,27 +2,26 @@
 // длинна которых меньше либо равна 3.
 Console.Clear();
 
-int count = 0;
-void FillArray(string[] arrFull)
+void FillArray(string[] arrFull, int a)
 {
     int count = 0;
     for (int i = 0; i < arrFull.Length; i++)
     {
-        string arr1;
-        arr1 = arrFull[i];
-        if (arr1.Length <= 3)
+        if(arrFull[i].Length <= a)
         {
             count++;
         }
     }
     string[] newArrFull = new string[count];
-    for (int j = 0; j < arrFull.Length; j++)
+    for(int j = 0; j < newArrFull.Length; j++)
     {
-        string arr2;
-        arr2 = arrFull[j];
-        if (arr2.Length <= 3)
+        for(int g = 0; g < arrFull.Length; g++)
         {
-            newArrFull[j] = arrFull[j];
+            if(arrFull[g].Length <= a)
+            {
+                newArrFull[j] = arrFull[g];
+                j++;
+            }
         }
     }
     for (int k = 0; k < newArrFull.Length; k++)
@@ -32,17 +31,28 @@ void FillArray(string[] arrFull)
     Console.WriteLine();
 }
 
-string array1 = Console.ReadLine();
-count++;
+Console.WriteLine("Программа ищет строки, кол-во символов в которых меньше введенного числа.");
+Console.WriteLine();
+Console.WriteLine("Введите число, на которое будет ориентироваться программа.");
+int count = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
 
-string array2 = Console.ReadLine();
-count++;
+Console.WriteLine("Введите первую строку.");
+var array1 = Console.ReadLine();
+Console.WriteLine();
 
-string array3 = Console.ReadLine();
-count++;
+Console.WriteLine("Введите вторую строку.");
+var array2 = Console.ReadLine();
+Console.WriteLine();
 
-string array4 = Console.ReadLine();
-count++;
+Console.WriteLine("Введите третью строку.");
+var array3 = Console.ReadLine();
+Console.WriteLine();
 
-string[] fullArray = new string[count];
-FillArray(fullArray);
+Console.WriteLine("Введите четвертую строку.");
+var array4 = Console.ReadLine();
+Console.WriteLine();
+
+string[] fullArray = { $"{array1}", $"{array2}", $"{array3}", $"{array4}" };
+Console.WriteLine($"Вывод строк, в которых кол-во символов рано {count}.");
+FillArray(fullArray, count);
