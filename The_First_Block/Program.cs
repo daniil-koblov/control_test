@@ -3,7 +3,7 @@
 Console.Clear();
 
 int count = 0;
-string[] FillArray(string[] arrFull)
+void FillArray(string[] arrFull)
 {
     int count = 0;
     for (int i = 0; i < arrFull.Length; i++)
@@ -25,16 +25,9 @@ string[] FillArray(string[] arrFull)
             newArrFull[j] = arrFull[j];
         }
     }
-    arrFull = new string[count];
-    arrFull = newArrFull;
-    return arrFull;
-}
-
-void PrintArray(string[] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int k = 0; k < newArrFull.Length; k++)
     {
-        Console.Write($"{array[i]} ");
+        Console.Write($"{newArrFull[k]} ");
     }
     Console.WriteLine();
 }
@@ -53,4 +46,3 @@ count++;
 
 string[] fullArray = new string[count];
 FillArray(fullArray);
-PrintArray(fullArray);
