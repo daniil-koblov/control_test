@@ -4,11 +4,11 @@
 
 ## Блок-схема по заданию.
 
-![Иллюстрация к проекту1](https://github.com/daniil-koblov/Pictures_of-the-control_work/blob/main/Pictures_of_the_first_control_work/Block_diagram_of_the_control_work_on_the_first_block._Part_one..png)
+![1 Иллюстрация к проекту](https://github.com/daniil-koblov/Pictures_of-the-control_work/blob/main/Pictures_of_the_first_control_work/Block_diagram_of_the_control_work_on_the_first_block._Part_one..png)
 
-![Иллюстрация к проекту2](https://github.com/daniil-koblov/Pictures_of-the-control_work/blob/main/Pictures_of_the_first_control_work/Block_diagram_of_the_control_work_on_the_first_block._Part_two..png)
+![2 Иллюстрация к проекту](https://github.com/daniil-koblov/Pictures_of-the-control_work/blob/main/Pictures_of_the_first_control_work/Block_diagram_of_the_control_work_on_the_first_block._Part_two..png)
 
-![Иллюстрация к проекту3](https://github.com/daniil-koblov/Pictures_of-the-control_work/blob/main/Pictures_of_the_first_control_work/Block_diagram_of_the_control_work_on_the_first_block._Part_three..png)
+![3 Иллюстрация к проекту](https://github.com/daniil-koblov/Pictures_of-the-control_work/blob/main/Pictures_of_the_first_control_work/Block_diagram_of_the_control_work_on_the_first_block._Part_three..png)
 
 ## Условие:
 
