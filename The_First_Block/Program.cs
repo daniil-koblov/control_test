@@ -4,37 +4,40 @@ Console.Clear();
 
 void FillArray(string[] arrFull, int a)
 {
-    int count = 0;
+    int countMethood = 0;
     for (int i = 0; i < arrFull.Length; i++)
     {
-        if(arrFull[i].Length <= a)
+        if (arrFull[i].Length <= a)
         {
-            count++;
+            countMethood++;
         }
     }
-    string[] newArrFull = new string[count];
-    for(int j = 0; j < newArrFull.Length; j++)
+    string[] newArrFull = new string[countMethood];
+    int j = 0;
+    while (j < newArrFull.Length)
     {
-        for(int g = 0; g < arrFull.Length; g++)
+        for (int g = 0; g < arrFull.Length; g++)
         {
-            if(arrFull[g].Length <= a)
+            if (arrFull[g].Length <= a)
             {
                 newArrFull[j] = arrFull[g];
                 j++;
             }
         }
     }
-    for (int k = 0; k < newArrFull.Length; k++)
-    {
-        Console.Write($"{newArrFull[k]} ");
-    }
+    for (int k = 0; k < newArrFull.Length; k++) Console.Write($"{newArrFull[k]} ");
     Console.WriteLine();
 }
 
-Console.WriteLine("Программа ищет строки, кол-во символов в которых меньше введенного числа.");
+Console.WriteLine("Программа ищет строки, кол-во символов в которых меньше или равно введенному числу.");
 Console.WriteLine();
-Console.WriteLine("Введите число, на которое будет ориентироваться программа.");
-int count = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число равное или больше 1, на которое будет ориентироваться программа.");
+int countSymbol = Convert.ToInt32(Console.ReadLine());
+while (countSymbol < 1)
+{
+        Console.WriteLine("ОШИБКА! Необходимо ввести число равное или больше 1.");
+        countSymbol = Convert.ToInt32(Console.ReadLine());
+}
 Console.WriteLine();
 
 Console.WriteLine("Введите первую строку.");
@@ -54,5 +57,5 @@ var array4 = Console.ReadLine();
 Console.WriteLine();
 
 string[] fullArray = { $"{array1}", $"{array2}", $"{array3}", $"{array4}" };
-Console.WriteLine($"Вывод строк, в которых кол-во символов рано {count}.");
-FillArray(fullArray, count);
+Console.WriteLine($"Вывод строк, в которых кол-во символов равно или меньше {countSymbol}.");
+FillArray(fullArray, countSymbol);
